@@ -58,6 +58,8 @@ this code will execute 6 times meaning 6x10
 . Now you gaven't seen this yet have you?
 ```
 
+Or just: `++++++[->++++++++++<]>+++++.`
+
 `.` Will print an ascii character based upon the value of the current cell, so in our example the value was 60, we added 5 so we had a value of 65. <br>
 We then print a character based upon this value which is "A" as 65 is ascii for "A".
 
@@ -67,4 +69,10 @@ And finally `,` will ask for one byte of input from the user and store its ascii
 ,.
 ```
 
-So if you press A the cells value will be set to 65.
+So if you press A the cells value will be set to 65. <br>
+
+And incase you didn't realise already any character that is not an instruction will be ignored.
+
+```
+++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>++++++++++++++.>++++.-------.+++++++++++++.---.<<++.>>++++++++++++++.----------.++++++.<<.>>---------------.+++++++++.+++.<<.>>.-------------.----.+++.+++++.+++++.-------.<<.+.<++++++++++.
+```
