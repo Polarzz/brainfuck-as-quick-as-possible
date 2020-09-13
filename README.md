@@ -6,7 +6,6 @@
 Before we begin I would like you to have a look at brainfucks 'hello world' (short):
 
 ```brainfuck
-
 +[-[<<[+[--->]-[<<<]]]>>>-]>-.---.>..>.<<<<-.<+.>>>>>.>.<<.<-.
 
 ```
@@ -24,7 +23,6 @@ You can move between cells using `<` and `>`
 Lets write a simple program:
 
 ```bf
-
 ++>+++
 
 ```
@@ -32,3 +30,41 @@ Lets write a simple program:
 This program will add 2 to the first cell (cell 0) and then move up to the second cell (cell 1) and add 3 to it. <br>
 
 You may be it would take a while to reach the value of any meaningful ascii character using on `+` and `-` so I will show you the next two instructions, `[` and `]`.
+
+`[` starts a loop and `]` indicates the end of a loop. <br>
+Loops in brainfuck will execute all code inside of them as long as the cell which was being used when the loop started is not 0. <br>
+To put it into C:
+
+```c
+while(cells_value != 0){
+  // code to run
+}
+```
+
+Now we can multiply.
+
+```bf
+++++++ First number is 6
+
+[ start the loop
+- take away one from the first number every loop
+> move up to the next cell
+++++++++++ Second number is 10
+< go back to the first cell
+this code will execute 6 times meaning 6x10
+] end the loop
+> go the cell containing our answer
++++++ Add 5
+. Now you gaven't seen this yet have you?
+```
+
+`.` Will print an ascii character based upon the value of the current cell, so in our example the value was 60, we added 5 so we had a value of 65. <br>
+We then print a character based upon this value which is "A" as 65 is ascii for "A".
+
+And finally `,` will ask for one byte of input from the user and store its ascii value in the current cell.
+
+```brainfuck
+,.
+```
+
+So if you press A the cells value will be set to 65.
